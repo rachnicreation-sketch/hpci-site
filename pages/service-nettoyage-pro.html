@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nettoyage Professionnel — HPCI-SARL</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+.service-layout { display: grid; grid-template-columns: 1fr 340px; gap: 48px; }
+.service-main-img { width: 100%; aspect-ratio: 16/9; border-radius: 16px; overflow: hidden; margin-bottom: 32px; background: url('../images/services/nettoyage-pro.jpg') center/cover no-repeat; box-shadow: 0 10px 40px rgba(10,22,40,0.05); }
+.service-features { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 40px 0; }
+.feature-item { border-left: 3px solid var(--accent); padding-left: 20px; }
+.feature-item h5 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--navy); margin-bottom: 8px; text-transform: uppercase; }
+.feature-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+.sidebar-card { background: var(--light); border-radius: 16px; padding: 32px; margin-bottom: 24px; border: 1px solid var(--border); }
+.contact-sidebar { background: var(--navy); border-radius: 16px; padding: 32px; text-align: center; color: white; }
+@media(max-width:1024px){ .service-layout{grid-template-columns:1fr;} .sidebar{order:-1;} }
+</style>
+</head>
+<body data-root="../">
+
+<section class="page-hero" style="--bg-url: url('../images/services/nettoyage-pro.jpg');">
+  <div class="page-hero-bg"></div><div class="page-hero-pattern"></div><div class="page-hero-bar"></div>
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="../index.html">Accueil</a><span>›</span><a href="services.html">Services</a><span>›</span><span>Nettoyage Professionnel</span></div>
+    <h1>Nettoyage Professionnel</h1>
+    <p>Garantissez un environnement sain et productif pour vos collaborateurs et clients grâce à nos services d'entretien sur-mesure.</p>
+  </div>
+</section>
+
+<section style="background:var(--white);">
+  <div class="container">
+    <div class="service-layout">
+      <!-- CONTENU PRINCIPAL -->
+      <div class="anim">
+        <div class="service-main-img"></div>
+
+        <span class="section-label">Propreté & Image</span>
+        <h2 class="section-title">Hygiène des Espaces Professionnels</h2>
+        <p class="section-desc">L'hygiène de vos locaux est le reflet de votre professionnalisme. HPCI-SARL propose des contrats d'entretien flexibles pour vos bureaux, commerces et établissements publics, alliant discrétion et efficacité.</p>
+
+        <div class="service-features">
+          <div class="feature-item"><h5>Entretien Bureaux</h5><p>Nettoyage régulier des surfaces, vitres et zones communes.</p></div>
+          <div class="feature-item"><h5>Sols & Vitrerie</h5><p>Traitement spécifique des sols et nettoyage en hauteur de vos façades vitrées.</p></div>
+          <div class="feature-item"><h5>Produits Écologiques</h5><p>Emploi de produits de nettoyage respectueux de la santé et de l'environnement.</p></div>
+          <div class="feature-item"><h5>Discrétion Totale</h5><p>Interventions planifiées pour ne pas perturber votre activité commerciale.</p></div>
+        </div>
+
+        <h3 class="section-title" style="font-size: 1.6rem; margin-top: 50px;">Espaces Concernés</h3>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 24px 0 40px;">
+          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Bureaux de Direction et Open Spaces</li>
+          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Sièges Sociaux et Banques</li>
+          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Galeries Commerciales et Showrooms</li>
+          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Établissements Scolaires et Publics</li>
+        </ul>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <div class="sidebar-card">
+          <h4 style="font-family:'Barlow Condensed', sans-serif; font-weight: 700; border-bottom: 2px solid var(--accent); padding-bottom: 15px; margin-bottom: 20px;">Nos Expertises</h4>
+          <ul class="sidebar-nav">
+            <li><a href="service-nettoyage-industriel.html">Nettoyage Industriel</a></li>
+            <li><a href="service-maintenance.html">Maintenance Industrielle</a></li>
+            <li><a href="service-nettoyage-pro.html" class="active">Nettoyage Professionnel</a></li>
+            <li><a href="service-bio-nettoyage.html">Bio Nettoyage</a></li>
+            <li><a href="service-phytosanitaire.html">Phytosanitaire</a></li>
+            <li><a href="service-hse.html">Personnel HSE</a></li>
+            <li><a href="service-engineering.html">Engineering</a></li>
+          </ul>
+        </div>
+
+        <div class="contact-sidebar">
+          <h4>Besoin d'un Contrat d'Entretien ?</h4>
+          <p style="margin: 16px 0 24px;">Une solution adaptée à la fréquence de votre choix.</p>
+          <a href="contact.html" class="btn-primary" style="width: 100%; justify-content: center;">Contactez-nous →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="../components.js"></script>
+<script>
+  injectNav('nettoyage_pro');
+  injectFooter();
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.anim').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

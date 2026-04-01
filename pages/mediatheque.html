@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Médiathèque — HPCI-SARL</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+.filter-bar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+.filter-btn { padding: 8px 20px; border: 1px solid var(--border); border-radius: 20px; background: var(--white); color: var(--text); font-size: 0.84rem; font-weight: 600; cursor: pointer; transition: all .2s; font-family: 'Barlow',sans-serif; }
+.filter-btn.active, .filter-btn:hover { background: var(--blue); color: var(--white); border-color: var(--blue); }
+.media-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.media-item {
+  aspect-ratio: 4/3; border-radius: 8px; overflow: hidden; cursor: pointer;
+  position: relative; transition: transform .3s;
+  /* ═══════════════════════════════════════════════════════════
+     PHOTO MÉDIATHÈQUE
+     Remplacer par : background: url('../images/mediatheque/[nom].jpg') center/cover no-repeat;
+     Nommer les fichiers : media-01.jpg, media-02.jpg, etc.
+     Taille recommandée : 800×600px
+     ═══════════════════════════════════════════════════════════ -->
+  background: linear-gradient(135deg, var(--blue), var(--navy));
+  display: flex; align-items: center; justify-content: center; font-size: 2.5rem;
+}
+.media-item:hover { transform: scale(1.02); }
+.media-item::after { content: '🔍'; position: absolute; inset: 0; background: rgba(10,22,40,.6); display: flex; align-items: center; justify-content: center; font-size: 2rem; opacity: 0; transition: opacity .3s; display: flex; justify-content: center; align-items: center; }
+.media-item:hover::after { opacity: 1; }
+.media-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(10,22,40,.8)); color: white; padding: 20px 16px 12px; font-size: 0.82rem; font-weight: 600; }
+@media(max-width:1024px){ .media-grid{grid-template-columns:repeat(2,1fr);} }
+@media(max-width:640px){ .media-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body data-root="../">
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div><div class="page-hero-pattern"></div><div class="page-hero-bar"></div>
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="../index.html">Accueil</a><span>›</span><span>Médiathèque</span></div>
+    <h1>Médiathèque</h1>
+    <p>Découvrez en images nos équipes, nos équipements et nos réalisations sur le terrain.</p>
+  </div>
+</section>
+
+<section style="background:var(--light);">
+  <div class="container">
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterMedia('all',this)">Tout</button>
+      <button class="filter-btn" onclick="filterMedia('industriel',this)">Nettoyage industriel</button>
+      <button class="filter-btn" onclick="filterMedia('maintenance',this)">Maintenance</button>
+      <button class="filter-btn" onclick="filterMedia('equipe',this)">Équipe</button>
+      <button class="filter-btn" onclick="filterMedia('equip',this)">Équipements</button>
+      <button class="filter-btn" onclick="filterMedia('evenement',this)">Événements</button>
+    </div>
+
+    <div class="media-grid" id="mediaGrid">
+      <!-- ═══════════════════════════════════════════════════════════
+           GALERIE PHOTO — INSTRUCTIONS :
+           1. Copier vos photos dans : images/mediatheque/
+           2. Remplacer chaque .media-item par :
+              <div class="media-item" data-cat="[categorie]"
+                   style="background: url('../images/mediatheque/[nom].jpg') center/cover no-repeat;">
+                <div class="media-label">[Légende de la photo]</div>
+              </div>
+           3. Catégories disponibles : industriel | maintenance | equipe | equip | evenement
+           ═══════════════════════════════════════════════════════════ -->
+      <div class="media-item anim" data-cat="industriel" style="background:linear-gradient(135deg,#1a4480,#0a1628);">🏭<div class="media-label">Nettoyage industriel — Pointe-Noire</div></div>
+      <div class="media-item anim" data-cat="maintenance" style="background:linear-gradient(135deg,#0d3b6e,#1a4480);">⚙️<div class="media-label">Maintenance équipements</div></div>
+      <div class="media-item anim" data-cat="equipe" style="background:linear-gradient(135deg,#2d8b57,#0a2e1a);">👷<div class="media-label">Notre équipe terrain</div></div>
+      <div class="media-item anim" data-cat="equip" style="background:linear-gradient(135deg,#6b3a0a,#2d1a00);">🚛<div class="media-label">Matériel haute pression</div></div>
+      <div class="media-item anim" data-cat="industriel" style="background:linear-gradient(135deg,#3a1a6b,#0a1628);">🏗️<div class="media-label">Chantier industriel</div></div>
+      <div class="media-item anim" data-cat="evenement" style="background:linear-gradient(135deg,#155a8a,#0a1628);">🤝<div class="media-label">Partenariat stratégique 2024</div></div>
+      <!-- Dupliquer ces blocs pour ajouter d'autres photos -->
+    </div>
+  </div>
+</section>
+
+<script src="../components.js"></script>
+<script>
+  injectNav('mediatheque'); injectFooter();
+  function filterMedia(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.media-item').forEach(item => {
+      item.style.display = (cat === 'all' || item.dataset.cat === cat) ? 'flex' : 'none';
+    });
+  }
+</script>
+</body>
+</html>

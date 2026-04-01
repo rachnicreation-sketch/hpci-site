@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Actualités — HPCI-SARL</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+.actus-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; }
+.actu-card { background: var(--white); border-radius: 8px; overflow: hidden; border: 1px solid var(--border); transition: all .3s; }
+.actu-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(10,22,40,.1); }
+.actu-thumb {
+  width:100%; height:220px; display:flex; align-items:center; justify-content:center;
+  /* ═══════════════════════════════════════════════════════════
+     IMAGE ACTUALITÉ
+     background: url('../images/actualites/[slug-article].jpg') center/cover no-repeat;
+     Taille recommandée : 800×440px
+     ═══════════════════════════════════════════════════════════ -->
+  font-size: 3rem;
+}
+.actu-body { padding: 24px; }
+.actu-tag { display:inline-block; background:var(--light); color:var(--blue); font-size:0.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:4px 10px; border-radius:20px; margin-bottom:12px; }
+.actu-body h3 { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:1.15rem; color:var(--navy); margin-bottom:10px; line-height:1.3; }
+.actu-body p { font-size:0.86rem; color:var(--muted); line-height:1.6; margin-bottom:20px; }
+.actu-footer { display:flex; align-items:center; justify-content:space-between; font-size:0.78rem; color:#aab4c4; border-top:1px solid var(--border); padding-top:16px; }
+.actu-footer a { color:var(--blue); font-weight:700; text-decoration:none; font-size:0.82rem; letter-spacing:.04em; text-transform:uppercase; }
+.actu-footer a:hover { text-decoration:underline; }
+@media(max-width:1024px){ .actus-grid{grid-template-columns:repeat(2,1fr);} }
+@media(max-width:640px){ .actus-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body data-root="../">
+<section class="page-hero">
+  <div class="page-hero-bg"></div><div class="page-hero-pattern"></div><div class="page-hero-bar"></div>
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="../index.html">Accueil</a><span>›</span><span>Actualités</span></div>
+    <h1>Nos Actualités</h1>
+    <p>Restez informés des dernières nouvelles, événements et réalisations de HPCI-SARL en Afrique.</p>
+  </div>
+</section>
+<section style="background:var(--light);">
+  <div class="container">
+    <div class="actus-grid">
+
+      <!-- ═══ ARTICLE 1 — Dupliquer ce bloc pour ajouter des articles ═══ -->
+      <div class="actu-card anim">
+        <div class="actu-thumb" style="background:linear-gradient(135deg,#1a4480,#0a1628);">📰</div>
+        <div class="actu-body">
+          <span class="actu-tag">Événement</span>
+          <h3>HPCI-SARL renforce sa présence à Brazzaville</h3>
+          <p>Notre équipe continue d'étendre ses activités pour mieux servir nos clients en République du Congo, avec l'ouverture d'un nouveau bureau équipé.</p>
+          <div class="actu-footer">
+            <span>📅 Janvier 2025</span>
+            <a href="#">Lire l'article →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="actu-card anim">
+        <div class="actu-thumb" style="background:linear-gradient(135deg,#2d8b57,#0a2e1a);">📋</div>
+        <div class="actu-body">
+          <span class="actu-tag">Certification</span>
+          <h3>Nouvelle certification HSE obtenue par HPCI-SARL</h3>
+          <p>HPCI-SARL reçoit une nouvelle distinction internationale attestant de son engagement envers les normes HSE les plus strictes.</p>
+          <div class="actu-footer">
+            <span>📅 Décembre 2024</span>
+            <a href="#">Lire l'article →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="actu-card anim">
+        <div class="actu-thumb" style="background:linear-gradient(135deg,#6b3a0a,#2d1a00);">🤝</div>
+        <div class="actu-body">
+          <span class="actu-tag">Partenariat</span>
+          <h3>HPCI-SARL signe un nouveau partenariat stratégique</h3>
+          <p>Un accord de collaboration renforce nos capacités d'intervention dans la sous-région Afrique Centrale et de l'Ouest.</p>
+          <div class="actu-footer">
+            <span>📅 Novembre 2024</span>
+            <a href="#">Lire l'article →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ajouter d'autres articles en dupliquant le bloc actu-card -->
+      <!-- Pour chaque article : ajouter une image dans images/actualites/ et mettre à jour le background -->
+
+    </div>
+  </div>
+</section>
+<script src="../components.js"></script>
+<script> injectNav('actualite'); injectFooter(); </script>
+</body>
+</html>
