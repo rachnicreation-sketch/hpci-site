@@ -66,7 +66,7 @@
 <nav>
   <div class="nav-inner">
     <a href="./index.php" class="logo">
-      <img src="./images/logo/logo-hpci.png" alt="HPCI-SARL" style="height:48px;">
+      <img src="./images/logo/LOGO-PNR.jpeg" alt="HPCI-SARL" style="height:48px;">
     </a>
     <ul class="nav-links">
       <li><a href="./index.php" class="active">Accueil</a></li>
@@ -160,7 +160,7 @@
 <footer>
   <div class="footer-grid container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; padding: 60px 20px;">
     <div>
-      <img src="./images/logo/logo-hpci.png" alt="Logo" style="height: 40px; margin-bottom: 20px;">
+      <img src="./images/logo/LOGO-PNR.jpeg" alt="Logo" style="height: 40px; margin-bottom: 20px;">
       <p style="font-size: 0.9rem; color: #64748b;">Hygiène Prodige Com International — Expert en solutions industrielles.</p>
       <div class="footer-social" style="margin-top: 20px; display: flex; gap: 15px;">
         <a href="https://www.facebook.com/profile.php?id=61565882327789" target="_blank" style="color: #1a4480; font-size: 1.2rem;"><i class="fa-brands fa-facebook"></i></a>

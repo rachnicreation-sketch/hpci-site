@@ -50,7 +50,7 @@ function injectNav(activePage) {
     <nav>
       <div class="nav-inner">
         <a href="${pages.accueil}" class="logo">
-          <img src="${root}images/logo/logo-hpci.png" alt="HPCI-SARL" style="height:48px;">
+          <img src="${root}images/logo/LOGO-PNR.jpeg" alt="HPCI-SARL" style="height:48px;">
         </a>
         <ul class="nav-links">
           <li><a href="${pages.accueil}" class="${activePage === 'accueil' ? 'active' : ''}">Accueil</a></li>
@@ -105,7 +105,7 @@ function injectFooter() {
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="${root}index.html" class="footer-logo">
-            <img src="${root}images/logo/logo-hpci.png" alt="HPCI-SARL" style="height:40px;">
+            <img src="${root}images/logo/LOGO-PNR.jpeg" alt="HPCI-SARL" style="height:40px;">
           </a>
           <p>Hygiène Prodige Com International — Spécialiste du nettoyage industriel, de la maintenance et de l'assainissement en Afrique centrale et de l'Ouest.</p>
           <div class="footer-social">

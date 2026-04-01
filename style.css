@@ -6,9 +6,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap');
 
 :root {
-  --navy:   #0a1628;
-  --blue:   #1a4480;
-  --accent: #e8a020;
+  --navy:   #040a1b;
+  --blue:   #0208E4;
+  --accent: #01FFFF;
   --green:  #2d8b57;
   --light:  #f4f6f9;
   --white:  #ffffff;
@@ -48,7 +48,7 @@ section { padding: 90px 0; }
   text-decoration: none; letter-spacing: 0.03em; text-transform: uppercase;
   transition: all .25s;
 }
-.btn-primary:hover { background: #d4900f; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,160,32,.35); }
+.btn-primary:hover { background: #00cccc; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(1, 255, 255, .35); }
 
 .btn-outline {
   display: inline-flex; align-items: center; gap: 8px;
@@ -99,7 +99,7 @@ nav { background: var(--white); border-bottom: 3px solid var(--accent); position
 .dropdown a:last-child { border-bottom: none; }
 .dropdown a:hover { background: var(--light); color: var(--blue); padding-left: 26px; }
 .nav-cta { background: var(--accent) !important; color: var(--navy) !important; padding: 10px 22px !important; border-radius: 4px; font-weight: 700 !important; }
-.nav-cta:hover { background: #d4900f !important; }
+.nav-cta:hover { background: #00cccc !important; }
 .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; background: none; border: none; }
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); border-radius: 2px; }
 

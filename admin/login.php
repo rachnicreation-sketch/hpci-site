@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
   <div class="login-card">
     <div class="login-logo">
-      <img src="../images/logo/logo-hpci.png" alt="HPCI-SARL" style="height: 60px;">
+      <img src="../images/logo/LOGO-PNR.jpeg" alt="HPCI-SARL" style="height: 60px;">
     </div>
     <h1>Espace Administration</h1>
     <?php if ($error): ?>
