@@ -91,7 +91,11 @@
 </nav>
 
 <section class="hero">
-  <div class="hero-bg-img"></div>
+  <div class="hero-bg-slider">
+    <div class="slide slide-1"></div>
+    <div class="slide slide-2"></div>
+    <div class="slide slide-3"></div>
+  </div>
   <div class="hero-overlay"></div>
   <div class="hero-pattern"></div>
   <div class="hero-bar"></div>
