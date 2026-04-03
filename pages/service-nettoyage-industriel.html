@@ -1,93 +1,180 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nettoyage Industriel — HPCI-SARL</title>
-<link rel="stylesheet" href="../style.css">
-<style>
-.service-layout { display: grid; grid-template-columns: 1fr 340px; gap: 48px; }
-.service-main-img { width: 100%; aspect-ratio: 16/9; border-radius: 16px; overflow: hidden; margin-bottom: 32px; background: url('../images/services/nettoyage-industrielle.jpg') center/cover no-repeat; box-shadow: 0 10px 40px rgba(10,22,40,0.05); }
-.service-features { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 40px 0; }
-.feature-item { border-left: 3px solid var(--accent); padding-left: 20px; }
-.feature-item h5 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--navy); margin-bottom: 8px; text-transform: uppercase; }
-.feature-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
-.sidebar-card { background: var(--light); border-radius: 16px; padding: 32px; margin-bottom: 24px; border: 1px solid var(--border); }
-.contact-sidebar { background: var(--navy); border-radius: 16px; padding: 32px; text-align: center; color: white; }
-@media(max-width:1024px){ .service-layout{grid-template-columns:1fr;} .sidebar{order:-1;} }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nettoyage Industriel — HPCI-SARL</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .service-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 48px;
+    }
+
+    .service-main-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 32px;
+      background: url('../images/services/nettoyage-industrielle.jpg') center/cover no-repeat;
+      box-shadow: 0 10px 40px rgba(10, 22, 40, 0.05);
+    }
+
+    .service-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 40px 0;
+    }
+
+    .feature-item {
+      border-left: 3px solid var(--accent);
+      padding-left: 20px;
+    }
+
+    .feature-item h5 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .feature-item p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .sidebar-card {
+      background: var(--light);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      border: 1px solid var(--border);
+    }
+
+    .contact-sidebar {
+      background: var(--navy);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      color: white;
+    }
+
+    @media(max-width:1024px) {
+      .service-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        order: -1;
+      }
+    }
+  </style>
 </head>
+
 <body data-root="../">
 
-<section class="page-hero" style="--bg-url: url('../images/services/nettoyage-industrielle.jpg');">
-  <div class="page-hero-bg"></div><div class="page-hero-pattern"></div><div class="page-hero-bar"></div>
-  <div class="page-hero-inner">
-    <div class="breadcrumb"><a href="../index.html">Accueil</a><span>›</span><a href="services.html">Services</a><span>›</span><span>Nettoyage Industriel</span></div>
-    <h1>Nettoyage Industriel</h1>
-    <p>Solutions expertes pour les environnements complexes : pétrochimie, énergie et production lourde.</p>
-  </div>
-</section>
+  <section class="page-hero" style="--bg-url: url('../images/services/nettoyage-industrielle.jpg');">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-pattern"></div>
+    <div class="page-hero-bar"></div>
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="../index.html">Accueil</a><span>›</span><a
+          href="services.html">Services</a><span>›</span><span>Nettoyage Industriel</span></div>
+      <h1>Nettoyage Industriel</h1>
 
-<section style="background:var(--white);">
-  <div class="container">
-    <div class="service-layout">
-      <!-- CONTENU PRINCIPAL -->
-      <div class="anim">
-        <div class="service-main-img"></div>
+    </div>
+  </section>
 
-        <span class="section-label">Expertise Technique</span>
-        <h2 class="section-title">Maintenance de l'Hygiène Industrielle</h2>
-        <p class="section-desc">HPCI-SARL déploie des équipes hautement qualifiées pour le nettoyage de sites industriels critiques. Nous intervenons sur des plateformes pétrolières, raffineries et usines avec des protocoles QHSE rigoureux.</p>
+  <section style="background:var(--white);">
+    <div class="container">
+      <div class="service-layout">
+        <!-- CONTENU PRINCIPAL -->
+        <div class="anim">
+          <div class="service-main-img"></div>
 
-        <div class="service-features">
-          <div class="feature-item"><h5>Dégraissage Lourd</h5><p>Nettoyage en profondeur des cuves, réservoirs et unités de production contaminés.</p></div>
-          <div class="feature-item"><h5>Haute Pression</h5><p>Utilisation d'équipements hydrodynamiques pour le décapage de surfaces industrielles.</p></div>
-          <div class="feature-item"><h5>Conformité QHSE</h5><p>Respect absolu des normes de sécurité et de protection de l'environnement.</p></div>
-          <div class="feature-item"><h5>Innovation</h5><p>Emploi de techniques non abrasives et produits biodégradables certifiés.</p></div>
+          <span class="section-label">Expertise Technique</span>
+          <h2 class="section-title">NETTOYAGE INDUSTRIEL</h2>
+          <p class="section-desc">HPCI-SARL déploie des équipes hautement qualifiées pour le nettoyage de sites
+            industriels critiques. Nous intervenons sur des plateformes pétrolières, raffineries et usines avec des
+            protocoles QHSE rigoureux.</p>
+
+          <div class="service-features">
+            <div class="feature-item">
+              <h5>Nettoyage & traitement des espaces confinées</h5>
+              <p>Sécurité des opérateurs par un approvisionnement en air frais,
+                extraction de l’air vicié dans l’espace confiné de l’intervention, surveillance permanente garantie,
+                tout pour un travail aux normes dans les espaces confinés dont l’entretien et le nettoyage deviennent
+                une routine.</p>
+            </div>
+            <div class="feature-item">
+              <h5>Néttoyage des bacs à hydrocarbure & bassins API</h5>
+              <p>Les prestations réalisées à l’aide d’équipements divers :</p>
+              <ul>
+                <li>Véhicule hydro cureur pour le pompage des hydrocarbures</li>
+                <li>Machine à vapeur haute et très pression pour le nettoyage des bacs</li>
+                <li>Ecrémeur pompe nénuphar pour nettoyage des bassins</li>
+              </ul>
+            </div>
+            <div class="feature-item">
+              <h5>Traitement de la pollution marine</h5>
+              <p>InHPCI intervient dans le traitement de la pollution marine sur :</p>
+              <ul>
+                <li>La nappe d’huile</li>
+                <li>Les franges côtières</li>
+              </ul>
+              <p><strong>rampe à dispersant:</strong> La rampe de pulvérisation dont la mission est d’épandre un agent
+                accélérateur de
+                biodégradation sur une nappe d’huile. Elle est montée sur un bateau. Équipement de récupération de
+                produits polluants sur frange côtière.</p>
+              <p><strong>Le canon à dispersant:</strong> Il est employé pour combattre les pollutions d’exploitation
+                Offshore, les pollutions côtières et toute trace d’huile à la surface de l’eau.</p>
+            </div>
+          </div>
         </div>
 
-        <h3 class="section-title" style="font-size: 1.6rem; margin-top: 50px;">Domaines d'Action</h3>
-        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 24px 0 40px;">
-          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Raffineries et Sites Pétroliers</li>
-          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Centrales Électriques et Mines</li>
-          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Unités de Fabrication Agroalimentaire</li>
-          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Chantiers Navals et Portuaires</li>
-        </ul>
-      </div>
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+          <div class="sidebar-card">
+            <h4
+              style="font-family:'Barlow Condensed', sans-serif; font-weight: 700; border-bottom: 2px solid var(--accent); padding-bottom: 15px; margin-bottom: 20px;">
+              Nos Expertises</h4>
+            <ul class="sidebar-nav">
+              <li><a href="service-nettoyage-industriel.html" class="active">Nettoyage Industriel</a></li>
+              <li><a href="service-maintenance.html">Maintenance Industrielle</a></li>
+              <li><a href="service-nettoyage-pro.html">Nettoyage Professionnel</a></li>
+              <li><a href="service-bio-nettoyage.html">Bio Nettoyage</a></li>
+              <li><a href="service-phytosanitaire.html">Phytosanitaire</a></li>
+              <li><a href="service-hse.html">Personnel HSE</a></li>
+              <li><a href="service-engineering.html">Engineering</a></li>
+            </ul>
+          </div>
 
-      <!-- SIDEBAR -->
-      <div class="sidebar">
-        <div class="sidebar-card">
-          <h4 style="font-family:'Barlow Condensed', sans-serif; font-weight: 700; border-bottom: 2px solid var(--accent); padding-bottom: 15px; margin-bottom: 20px;">Nos Expertises</h4>
-          <ul class="sidebar-nav">
-            <li><a href="service-nettoyage-industriel.html" class="active">Nettoyage Industriel</a></li>
-            <li><a href="service-maintenance.html">Maintenance Industrielle</a></li>
-            <li><a href="service-nettoyage-pro.html">Nettoyage Professionnel</a></li>
-            <li><a href="service-bio-nettoyage.html">Bio Nettoyage</a></li>
-            <li><a href="service-phytosanitaire.html">Phytosanitaire</a></li>
-            <li><a href="service-hse.html">Personnel HSE</a></li>
-            <li><a href="service-engineering.html">Engineering</a></li>
-          </ul>
-        </div>
-
-        <div class="contact-sidebar">
-          <h4>Étude Personnalisée</h4>
-          <p style="margin: 16px 0 24px;">Demandez une intervention ou un audit de vos installations.</p>
-          <a href="contact.html" class="btn-primary" style="width: 100%; justify-content: center;">Contactez-nous →</a>
+          <div class="contact-sidebar">
+            <h4>Étude Personnalisée</h4>
+            <p style="margin: 16px 0 24px;">Demandez une intervention ou un audit de vos installations.</p>
+            <a href="contact.html" class="btn-primary" style="width: 100%; justify-content: center;">Contactez-nous →</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<script src="../components.js"></script>
-<script>
-  injectNav('nettoyage_ind');
-  injectFooter();
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.anim').forEach(el => observer.observe(el));
-</script>
+  <script src="../components.js"></script>
+  <script>
+    injectNav('nettoyage_ind');
+    injectFooter();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.anim').forEach(el => observer.observe(el));
+  </script>
 </body>
+
 </html>

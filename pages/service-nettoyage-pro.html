@@ -8,11 +8,76 @@
 <style>
 .service-layout { display: grid; grid-template-columns: 1fr 340px; gap: 48px; }
 .service-main-img { width: 100%; aspect-ratio: 16/9; border-radius: 16px; overflow: hidden; margin-bottom: 32px; background: url('../images/services/nettoyage-pro.jpg') center/cover no-repeat; box-shadow: 0 10px 40px rgba(10,22,40,0.05); }
-.service-features { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 40px 0; }
-.feature-item { border-left: 3px solid var(--accent); padding-left: 20px; }
-.feature-item h5 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--navy); margin-bottom: 8px; text-transform: uppercase; }
-.feature-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
-.sidebar-card { background: var(--light); border-radius: 16px; padding: 32px; margin-bottom: 24px; border: 1px solid var(--border); }
+    /* ── SERVICE GALLERY ── */
+    .equip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .equip-card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: all .3s;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .equip-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      border-color: var(--accent);
+    }
+
+    .equip-img {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: #f8fafc;
+    }
+
+    .equip-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s;
+    }
+
+    .equip-card:hover .equip-img img {
+      transform: scale(1.1);
+    }
+
+    .equip-info {
+      padding: 24px;
+      text-align: left;
+    }
+
+    .equip-info h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--navy);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .equip-info p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .sidebar-card {
+      background: var(--light);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      border: 1px solid var(--border);
+    }
 .contact-sidebar { background: var(--navy); border-radius: 16px; padding: 32px; text-align: center; color: white; }
 @media(max-width:1024px){ .service-layout{grid-template-columns:1fr;} .sidebar{order:-1;} }
 </style>
@@ -23,8 +88,8 @@
   <div class="page-hero-bg"></div><div class="page-hero-pattern"></div><div class="page-hero-bar"></div>
   <div class="page-hero-inner">
     <div class="breadcrumb"><a href="../index.html">Accueil</a><span>›</span><a href="services.html">Services</a><span>›</span><span>Nettoyage Professionnel</span></div>
-    <h1>Nettoyage Professionnel</h1>
-    <p>Garantissez un environnement sain et productif pour vos collaborateurs et clients grâce à nos services d'entretien sur-mesure.</p>
+    <h1>Nettoyage Professionnel et Entretien</h1>
+    <p>Des environnements propres, sains et accueillants pour garantir la productivité, la sécurité et le bien-être de tous.</p>
   </div>
 </section>
 
@@ -35,24 +100,52 @@
       <div class="anim">
         <div class="service-main-img"></div>
 
-        <span class="section-label">Propreté & Image</span>
-        <h2 class="section-title">Hygiène des Espaces Professionnels</h2>
-        <p class="section-desc">L'hygiène de vos locaux est le reflet de votre professionnalisme. HPCI-SARL propose des contrats d'entretien flexibles pour vos bureaux, commerces et établissements publics, alliant discrétion et efficacité.</p>
+        <span class="section-label">Engagement Qualité</span>
+        <h2 class="section-title">Notre Mission d'Excellence</h2>
+        <p class="section-desc">Chez HPCI-SARL, notre mission est de fournir des services de nettoyage et d’entretien de haute qualité pour créer des environnements propres, sains et accueillants pour nos clients. Nous comprenons l’importance de maintenir des espaces impeccables pour la productivité, la sécurité et le bien-être de tous.</p>
 
-        <div class="service-features">
-          <div class="feature-item"><h5>Entretien Bureaux</h5><p>Nettoyage régulier des surfaces, vitres et zones communes.</p></div>
-          <div class="feature-item"><h5>Sols & Vitrerie</h5><p>Traitement spécifique des sols et nettoyage en hauteur de vos façades vitrées.</p></div>
-          <div class="feature-item"><h5>Produits Écologiques</h5><p>Emploi de produits de nettoyage respectueux de la santé et de l'environnement.</p></div>
-          <div class="feature-item"><h5>Discrétion Totale</h5><p>Interventions planifiées pour ne pas perturber votre activité commerciale.</p></div>
+        <div class="equip-grid">
+          <!-- Item 1: Vitrerie -->
+          <div class="equip-card anim">
+            <div class="equip-img"><img src="../images/services/net-pro-1.jpg" alt="Nettoyage Vitrerie"></div>
+            <div class="equip-info">
+              <h4>Murs et Espaces vitrés</h4>
+              <p>Nettoyage quotidien ou périodique des bureaux, des salles de réunion et des espaces communs. Époussetage, aspirateur, lavage des sols, décapage et désinfection des surfaces pour une clarté absolue.</p>
+            </div>
+          </div>
+          <!-- Item 2: Commercial -->
+          <div class="equip-card anim">
+            <div class="equip-img"><img src="../images/services/net-pro-2.jpg" alt="Espaces Commerciaux"></div>
+            <div class="equip-info">
+              <h4>Espaces Commerciaux</h4>
+              <p>Nettoyage spécialisé de magasins, restaurants, hôtels et centres commerciaux. Gestion complète des déchets, nettoyage des vitrines et entretien des sols pour une image de marque irréprochable.</p>
+            </div>
+          </div>
+          <!-- Item 3: Station Service -->
+          <div class="equip-card anim">
+            <div class="equip-img"><img src="../images/services/net-pro-3.jpg" alt="Station Service"></div>
+            <div class="equip-info">
+              <h4>Stations Service</h4>
+              <p>HPCI SARL investit dans la technologie de pointe pour nettoyer efficacement les stations. Nous utilisons des dégraissants solvants puissants pour traiter les hydrocarbures sur les pompes et les pistes.</p>
+            </div>
+          </div>
         </div>
 
-        <h3 class="section-title" style="font-size: 1.6rem; margin-top: 50px;">Espaces Concernés</h3>
-        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 24px 0 40px;">
-          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Bureaux de Direction et Open Spaces</li>
-          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Sièges Sociaux et Banques</li>
-          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Galeries Commerciales et Showrooms</li>
-          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Établissements Scolaires et Publics</li>
-        </ul>
+        <div class="service-features" style="margin-top: 48px;">
+          <div class="feature-item">
+            <h5>Nettoyage & Entretien Espaces Professionnels</h5>
+            <p>Services experts assurant la propreté et la maintenance régulière, préservant l’esthétique, la fonctionnalité et la durabilité des espaces et installations professionnelles, commerciales et domestiques.</p>
+          </div>
+          <div class="feature-item">
+            <h5>Nettoyage de Résidences</h5>
+            <p>Entretien minutieux de maisons, d’appartements et de propriétés résidentielles. Nous intervenons sur le nettoyage en profondeur des sols, des salles de bains, des cuisines et de toutes vos pièces de vie.</p>
+          </div>
+        </div>
+
+        <div class="sidebar-card" style="background: var(--navy); color: white; margin-top: 40px; border: none;">
+          <h4 style="color: var(--accent); margin-bottom: 12px; font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem;">À propos de notre expertise</h4>
+          <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.9; text-align: justify;">HPCI-Sarl est une entreprise spécialisée dans les prestations d’entretien (espace professionnel et domestique), de nettoyage industriel, de nettoyage des espaces verts (désherbage), d’assainissement et de l’application des 3D (Désinsectisation, Dératisation et Désinfection).</p>
+        </div>
       </div>
 
       <!-- SIDEBAR -->

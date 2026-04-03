@@ -7,17 +7,11 @@
   <title>HPCI-SARL — Hygiène Prodige Com International</title>
   <meta name="description"
     content="Spécialiste du nettoyage industriel, de la maintenance et de l'assainissement en Afrique centrale et de l'Ouest.">
+  <!-- Font Awesome 6.x -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* ── HERO ACCUEIL ── */
-    .hero {
-      position: relative;
-      min-height: 700px;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      background: var(--navy);
-    }
+    /* ... (Removing old hero styles to use global style.css) ... */
 
     .hero-bg-img {
       position: absolute;
@@ -409,42 +403,37 @@
 
     .partners-track {
       display: flex;
-      width: calc(250px * 10);
-      animation: marquee 25s linear infinite;
-      gap: 80px;
+      width: calc(250px * 28); /* 14 items + 14 duplicates */
+      animation: marquee 40s linear infinite;
+      gap: 50px;
       align-items: center;
     }
 
     .partner-item {
       flex: 0 0 200px;
-      height: 80px;
+      height: 100px;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform 0.3s;
-      filter: none !important;
-      opacity: 0.8;
+      transition: all 0.3s;
+      opacity: 0.7;
+      padding: 10px;
     }
 
     .partner-item:hover {
-      transform: scale(1.1);
+      transform: scale(1.15);
       opacity: 1;
     }
 
     .partner-item img {
       max-width: 100%;
-      max-height: 70px;
+      max-height: 80px;
       object-fit: contain;
     }
 
     @keyframes marquee {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(calc(-250px * 5));
-      }
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-250px * 14)); }
     }
 
     @media (max-width: 1024px) {
@@ -488,6 +477,7 @@
       }
     }
   </style>
+  <script src="scripts/hero_slider.js" defer></script>
 </head>
 
 <body data-root="./">
@@ -547,45 +537,70 @@
     </div>
   </nav>
 
-  <section class="hero">
-    <div class="hero-bg-slider">
-      <div class="slide slide-1"></div>
-      <div class="slide slide-2"></div>
-      <div class="slide slide-3"></div>
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-pattern"></div>
-    <div class="hero-bar"></div>
-    <div class="hero-content">
-      <div class="hero-text">
-        <div class="hero-badge">Expertise & Innovation depuis 2014</div>
-        <h1>L'Excellence du Nettoyage <em>Industriel & Professionnel</em></h1>
-        <p>Leader panafricain de l'hygiène industrielle, HPCI-SARL déploie des solutions de pointe pour la maintenance,
-          l'assainissement et la sécurité de vos installations les plus critiques.</p>
-        <div class="hero-actions">
-          <a href="pages/services.html" class="btn-primary">Nos solutions techniques →</a>
-          <a href="pages/contact.html" class="btn-outline">Demander une étude</a>
+  <section class="hero-slider">
+    <div class="hero-slides">
+      <!-- SLIDE 1: MAIN -->
+      <div class="hero-slide active">
+        <div class="slide-content">
+          <span class="slide-badge">Expertise & Innovation depuis 2014</span>
+          <h1 class="slide-title">L'Excellence du Nettoyage <span>Industriel & Professionnel</span></h1>
+          <p class="slide-desc">Leader panafricain de l'hygiène industrielle, HPCI-SARL déploie des solutions de pointe pour la maintenance, l'assainissement et la sécurité de vos installations les plus critiques.</p>
+          <div class="slide-cta">
+            <a href="pages/services.html" class="btn-slider">Nos solutions techniques <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="./images/hero/hero-principal.jpg" alt="Nettoyage Industriel">
         </div>
       </div>
-      <div class="hero-stats">
-        <div class="stat-card">
-          <div class="stat-number"><span class="count-up" data-target="10">0</span>+</div>
-          <div class="stat-label">Années d'Excellence</div>
+
+      <!-- SLIDE 2: PHYTO -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <span class="slide-badge">Hygiène Environnementale</span>
+          <h1 class="slide-title">Traitement phytosanitaire et <span>assainissement</span></h1>
+          <p class="slide-desc">Méthodes spécifiques utilisées pour éliminer les organismes nuisibles et maintenir un environnement sain, tout en préservant la biodiversité.</p>
+          <div class="slide-cta">
+            <a href="pages/services.html" class="btn-slider">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
-        <div class="stat-card">
-          <div class="stat-number"><span class="count-up" data-target="200">0</span>+</div>
-          <div class="stat-label">Experts Terrain</div>
+        <div class="slide-visual">
+          <img src="./images/services/phyto.jpg" alt="Traitement Phytosanitaire">
         </div>
-        <div class="stat-card">
-          <div class="stat-number"><span class="count-up" data-target="3">0</span></div>
-          <div class="stat-label">Pays d'Implantation</div>
+      </div>
+
+      <!-- SLIDE 3: HSE -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <span class="slide-badge">Qualité, Hygiène, Sécurité & Environnement</span>
+          <h1 class="slide-title">Mise à disposition du <span>personnel HSE</span></h1>
+          <p class="slide-desc">Fourniture de professionnels en santé, sécurité et environnement pour garantir la conformité réglementaire et la gestion des risques.</p>
+          <div class="slide-cta">
+            <a href="pages/services.html" class="btn-slider">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
-        <div class="stat-card">
-          <div class="stat-number"><span class="count-up" data-target="500">0</span>+</div>
-          <div class="stat-label">Grands Comptes</div>
+        <div class="slide-visual">
+          <img src="./images/services/HSE.jpg" alt="Personnel HSE">
+        </div>
+      </div>
+
+      <!-- SLIDE 4: ENGINEERING -->
+      <div class="hero-slide">
+        <div class="slide-content">
+          <span class="slide-badge">Bureau d'études & Engineering</span>
+          <h1 class="slide-title">Engineering : <span>Conception & Optimisation</span></h1>
+          <p class="slide-desc">L’ingénierie est une discipline qui englobe la conception, la réalisation et l’optimisation de systèmes techniques, industriels ou mécaniques.</p>
+          <div class="slide-cta">
+            <a href="pages/services.html" class="btn-slider">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="slide-visual">
+          <img src="./images/services/maintenance-industrielle.jpg" alt="Engineering HPCI">
         </div>
       </div>
     </div>
+
+    <div class="hero-dots"></div>
   </section>
 
   <section class="about">
@@ -597,12 +612,15 @@
           </div>
         </div>
         <div class="about-text anim">
-          <span class="section-label">Qui sommes-nous</span>
-          <h2 class="section-title">Hygiène Prodige Com International</h2>
-          <p class="section-desc">HPCI-SARL redéfinit les standards du nettoyage industriel en Afrique. En « Nettoyant
-            autrement », nous offrons à nos partenaires une efficience opérationnelle inégalée.</p>
-          <p class="section-desc">Équipés des dernières innovations technologiques, nous garantissons des interventions
-            sécurisées, respectueuses de l'environnement et conformes aux exigences les plus strictes.</p>
+          <span class="section-label">A PROPOS DE NOUS</span>
+          <h2 class="section-title">En "Nettoyage autrement"</h2>
+          <p class="section-desc">HPCI-SARL offre à sa clientèle un produit efficient.
+            Dans cette optique, HPCI-SARL a procédé à la diversification de ses prestations mises à la disposition de sa clientèle.
+            Aujourd’hui, HPCI-SARL intervient dans les divers segments du nettoyage. Nos prestations s’adressent aussi bien au segment du nettoyage industriel, qu’à celui du nettoyage domestique en passant par l’assainissement de l’environnement.
+            Pour « nettoyer autrement », HPCI-SARL s’est dotée,d’équipements innovants, qui confèrent une efficience effective à sa démarche de nettoyage.</p>
+          <p class="section-desc">Chacune de nos prestations sont effectuées avec ses équipements haut de gamme.
+            Pour « nettoyer autrement », HPCI-SARL a particulièrement investi dans le renforcement des compétences de son personnel qui lui permet de participer à traduire l’efficience recherchée.
+            « Nettoyer autrement » est le gage de la qualité que HPCI-SARL s’engage à maintenir et à développer pour la mettre au service de sa clientèle.</p>
           <div style="margin-top: 32px;">
             <a href="pages/a-propos.html" class="btn-dark">Découvrir notre ADN →</a>
           </div>
@@ -715,65 +733,36 @@
       <div class="partners-marquee">
         <div class="partners-track">
           <!-- Défilement infini -->
-          <a href="https://www.mucodec.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/mucodec.png" alt="MUCODEC"></a>
-          <a href="http://groupendounafrancois.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/groupe-ndouna.png" alt="GROUPE NDOUNA FRANCOIS"></a>
-          <a href="https://www.eni.com/" target="_blank" class="partner-item"><img src="./images/partenaires/eni.png"
-              alt="ENI"></a>
-          <a href="http://www.coraf.cg/" target="_blank" class="partner-item"><img src="./images/partenaires/coraf.png"
-              alt="CORAF"></a>
-          <a href="http://www.cec-congo.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/cec.png" alt="CEC"></a>
-          <a href="http://www.yeshigroup.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/alu-congo.png" alt="alu-congo"></a>
-          <a href="http://www.labanquepostale.fr/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/banque-postale.png" alt="banque-postale"></a>
-          <a href="http://www.beac.int/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/b-e-a-c.png" alt="b-e-a-c"></a>
-          <a href="http://www.brasco-congo.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/brasco.png" alt="brasco"></a>
-          <a href="http://www.groupe-somedia.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/saris-congo.png" alt="saris-congo"></a>
-          <a href="http://www.totalenergies.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/total-energies.png" alt="total-energies"></a>
-          <a href="http://www.sodexo.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/sodexo.png" alt="sodexo"></a>
-          <a href="http://www.weatherford.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/weatherford.png" alt="weatherford"></a>
-          <a href="http://www.snpc.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/snpc.png" alt="snpc"></a>
-  
+          <a href="#" class="partner-item"><img src="./images/partenaires/alucongo.jpeg" alt="ALUCONGO"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/beac.jpeg" alt="BEAC"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/banque-postale.jpeg" alt="LA BANQUE POSTALE"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/brasco.jpeg" alt="BRASCO"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/cec.jpeg" alt="CEC"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/coraf.jpeg" alt="CORAF"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/eni.jpeg" alt="ENI"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/groupe-ndouna.jpeg" alt="GROUPE NDOUNA"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/mucodec.jpeg" alt="MUCODEC"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/saris-congo.jpeg" alt="SARIS CONGO"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/sodexo.jpeg" alt="SODEXO"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/snpc.jpeg" alt="SNPC"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/total-energies.jpeg" alt="TOTAL ENERGIES"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/weatherford.jpeg" alt="WEATHERFORD"></a>
 
-          <!-- Duplicate for loop -->
-          <a href="https://www.mucodec.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/mucodec.png" alt="MUCODEC"></a>
-          <a href="http://groupendounafrancois.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/groupe-ndouna.png" alt="GROUPE NDOUNA FRANCOIS"></a>
-          <a href="https://www.eni.com/" target="_blank" class="partner-item"><img src="./images/partenaires/eni.png"
-              alt="ENI"></a>
-          <a href="http://www.coraf.cg/" target="_blank" class="partner-item"><img src="./images/partenaires/coraf.png"
-              alt="CORAF"></a>
-          <a href="http://www.cec-congo.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/cec.png" alt="CEC"></a>
-          <a href="http://www.yeshigroup.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/alu-congo.png" alt="alu-congo"></a>
-          <a href="http://www.labanquepostale.fr/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/banque-postale.png" alt="banque-postale"></a>
-          <a href="http://www.beac.int/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/b-e-a-c.png" alt="b-e-a-c"></a>
-          <a href="http://www.brasco-congo.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/brasco.png" alt="brasco"></a>
-          <a href="http://www.groupe-somedia.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/saris-congo.png" alt="saris-congo"></a>
-          <a href="http://www.totalenergies.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/total-energies.png" alt="total-energies"></a>
-          <a href="http://www.sodexo.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/sodexo.png" alt="sodexo"></a>
-          <a href="http://www.weatherford.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/weatherford.png" alt="weatherford"></a>
-          <a href="http://www.snpc.com/" target="_blank" class="partner-item"><img
-              src="./images/partenaires/snpc.png" alt="snpc"></a>
+          <!-- Duplicate for infinite loop -->
+          <a href="#" class="partner-item"><img src="./images/partenaires/alucongo.jpeg" alt="ALUCONGO"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/beac.jpeg" alt="BEAC"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/banque-postale.jpeg" alt="LA BANQUE POSTALE"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/brasco.jpeg" alt="BRASCO"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/cec.jpeg" alt="CEC"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/coraf.jpeg" alt="CORAF"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/eni.jpeg" alt="ENI"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/groupe-ndouna.jpeg" alt="GROUPE NDOUNA"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/mucodec.jpeg" alt="MUCODEC"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/saris-congo.jpeg" alt="SARIS CONGO"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/sodexo.jpeg" alt="SODEXO"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/snpc.jpeg" alt="SNPC"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/total-energies.jpeg" alt="TOTAL ENERGIES"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/weatherford.jpeg" alt="WEATHERFORD"></a>
   
         </div>
       </div>
@@ -799,10 +788,10 @@
         <p>Hygiène Prodige Com International — Spécialiste du nettoyage industriel, de la maintenance et de
           l'assainissement en Afrique centrale et de l'Ouest.</p>
         <div class="footer-social">
-          <a href="https://www.facebook.com/profile.php?id=61565882327789" target="_blank">FB</a>
-          <a href="https://www.linkedin.com/company/hpci-abidjansarl/" target="_blank">IN</a>
-          <a href="http://www.tiktok.com/@hpciabidjan.sarl" target="_blank">TK</a>
-          <a href="http://wa.me/2250706046595" target="_blank">WA</a>
+          <a href="https://www.facebook.com/profile.php?id=61565882327789" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/hpci-abidjansarl/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="http://www.tiktok.com/@hpciabidjan.sarl" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="http://wa.me/2250706046595" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
       <div class="footer-col">

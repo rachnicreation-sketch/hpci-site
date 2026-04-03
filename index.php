@@ -8,43 +8,10 @@
 <link rel="stylesheet" href="style.css">
 <!-- Font Awesome 6.x -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<style>
-/* HERO ACCUEIL */
-.hero { position: relative; min-height: 700px; display: flex; align-items: center; overflow: hidden; background: var(--navy); }
-.hero-bg-img { position: absolute; inset: 0; background: url('./images/hero/sld1.jpg') center/cover no-repeat; }
-.hero-overlay { position: absolute; inset: 0; background: rgba(10,35,40,.65); }
-.hero-pattern { position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,.01) 40px, rgba(255,255,255,.01) 41px), repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,.01) 40px, rgba(255,255,255,.01) 41px); }
-.hero-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--accent); }
-.hero-content { position: relative; max-width: 1280px; margin: 0 auto; padding: 100px 40px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 80px; align-items: center; width: 100%; }
-.hero-h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(2.8rem, 5vw, 4.2rem); line-height: 1; color: var(--white); margin-bottom: 24px; }
-.hero-h1 em { color: var(--accent); font-style: normal; display: block; }
-.hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
-.stat-card { background: rgba(255,255,255,0.05); padding: 40px 32px; text-align: center; }
-.stat-number { font-family: 'Barlow Condensed', sans-serif; font-size: 3.2rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 8px; }
-.stat-label { font-size: 0.85rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; }
-
-/* TESTIMONIALS SLIDER */
-.testimonials { padding: 0 !important; display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; background: var(--white); overflow: hidden; border-top: 1px solid var(--border); position: relative; }
-.testimonials-visual { background: url('./images/services/nettoyage-industrielle.jpg') center/cover no-repeat; position: relative; }
-.testimonials-slider { position: relative; width: 100%; height: 100%; overflow: hidden; }
-.testimonials-track { display: flex; transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1); height: 100%; }
-.testimonial-slide { min-width: 100%; padding: 80px; display: flex; flex-direction: column; justify-content: center; background: white; }
-.testimonials-text { font-size: 1.25rem; font-style: italic; color: var(--text); line-height: 1.6; margin-bottom: 40px; position: relative; }
-.testimonial-avatar { width: 64px; height: 64px; border-radius: 50%; background: #f0f4f8; overflow: hidden; }
-.testimonial-nav { position: absolute; bottom: 40px; left: 80px; display: flex; gap: 15px; align-items: center; z-index: 10; }
-.dot { width: 10px; height: 10px; border-radius: 50%; background: #d1d5db; cursor: pointer; transition: all 0.3s; }
-.dot.active { background: var(--accent); width: 30px; border-radius: 10px; }
-
-/* PARTNERS MARQUEE */
-.partners-section { padding: 80px 0; background: var(--white); text-align: center; border-top: 1px solid var(--border); overflow: hidden; }
-.partners-marquee { width: 100%; overflow: hidden; display: flex; position: relative; background: #f8fafc; padding: 40px 0; }
-.partners-track { display: flex; animation: marquee 25s linear infinite; gap: 80px; align-items: center; }
-.partner-item { flex: 0 0 200px; height: 80px; display: flex; align-items: center; justify-content: center; opacity: 0.8; transition: opacity 0.3s; }
-.partner-item:hover { opacity: 1; transform: scale(1.1); }
-@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-250px * 5)); } }
-
-@media (max-width: 1024px) { .hero-content { grid-template-columns: 1fr; text-align: center; } .testimonials { grid-template-columns: 1fr; } .testimonials-visual { display: none; } }
+  <style>
+/* ... (Existing styles if any, but I'll replace the hero part) ... */
 </style>
+<script src="scripts/hero_slider.js" defer></script>
 </head>
 <body data-root="./">
 
@@ -90,30 +57,71 @@
   </div>
 </nav>
 
-<section class="hero">
-  <div class="hero-bg-slider">
-    <div class="slide slide-1"></div>
-    <div class="slide slide-2"></div>
-    <div class="slide slide-3"></div>
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-pattern"></div>
-  <div class="hero-bar"></div>
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1 class="hero-h1">L'Excellence du Nettoyage <em>Industriel & Professionnel</em></h1>
-      <p>Leader panafricain de l'hygiène industrielle, HPCI-SARL déploie des solutions de pointe.</p>
-      <div class="hero-actions">
-        <a href="pages/services.php" class="btn-primary">Nos solutions techniques →</a>
+
+<section class="hero-slider">
+  <div class="hero-slides">
+    <!-- SLIDE 1: MAIN -->
+    <div class="hero-slide active">
+      <div class="slide-content">
+        <span class="slide-badge">Expertise & Innovation depuis 2014</span>
+        <h1 class="slide-title">L'Excellence du Nettoyage <span>Industriel & Professionnel</span></h1>
+        <p class="slide-desc">Leader panafricain de l'hygiène industrielle, HPCI-SARL déploie des solutions de pointe pour la maintenance, l'assainissement et la sécurité de vos installations les plus critiques.</p>
+        <div class="slide-cta">
+          <a href="pages/services.php" class="btn-slider">Nos solutions techniques <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="slide-visual">
+        <img src="./images/hero/hero-principal.jpg" alt="Nettoyage Industriel">
       </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat-card">
-        <div class="stat-number">10+</div>
-        <div class="stat-label">Années d'Excellence</div>
+
+    <!-- SLIDE 2: PHYTO -->
+    <div class="hero-slide">
+      <div class="slide-content">
+        <span class="slide-badge">Hygiène Environnementale</span>
+        <h1 class="slide-title">Traitement phytosanitaire et <span>assainissement</span></h1>
+        <p class="slide-desc">Méthodes spécifiques utilisées pour éliminer les organismes nuisibles et maintenir un environnement sain, tout en préservant la biodiversité.</p>
+        <div class="slide-cta">
+          <a href="pages/services.php" class="btn-slider">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="slide-visual">
+        <img src="./images/services/phyto.jpg" alt="Traitement Phytosanitaire">
+      </div>
+    </div>
+
+    <!-- SLIDE 3: HSE -->
+    <div class="hero-slide">
+      <div class="slide-content">
+        <span class="slide-badge">Qualité, Hygiène, Sécurité & Environnement</span>
+        <h1 class="slide-title">Mise à disposition du <span>personnel HSE</span></h1>
+        <p class="slide-desc">Fourniture de professionnels en santé, sécurité et environnement pour garantir la conformité réglementaire et la gestion des risques.</p>
+        <div class="slide-cta">
+          <a href="pages/services.php" class="btn-slider">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="slide-visual">
+        <img src="./images/services/HSE.jpg" alt="Personnel HSE">
+      </div>
+    </div>
+
+    <!-- SLIDE 4: ENGINEERING -->
+    <div class="hero-slide">
+      <div class="slide-content">
+        <span class="slide-badge">Bureau d'études & Engineering</span>
+        <h1 class="slide-title">Engineering : <span>Conception & Optimisation</span></h1>
+        <p class="slide-desc">L’ingénierie est une discipline qui englobe la conception, la réalisation et l’optimisation de systèmes techniques, industriels ou mécaniques.</p>
+        <div class="slide-cta">
+          <a href="pages/services.php" class="btn-slider">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="slide-visual">
+        <img src="./images/services/maintenance-industrielle.jpg" alt="Engineering HPCI">
       </div>
     </div>
   </div>
+
+  <div class="hero-dots"></div>
 </section>
 
 <!-- SECTIONS (Simplifiées pour le walkthrough) -->

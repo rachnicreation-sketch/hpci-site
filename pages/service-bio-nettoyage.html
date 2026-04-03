@@ -8,11 +8,20 @@
 <style>
 .service-layout { display: grid; grid-template-columns: 1fr 340px; gap: 48px; }
 .service-main-img { width: 100%; aspect-ratio: 16/9; border-radius: 16px; overflow: hidden; margin-bottom: 32px; background: url('../images/services/nettoyage-bio.jpg') center/cover no-repeat; box-shadow: 0 10px 40px rgba(10,22,40,0.05); }
-.service-features { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 40px 0; }
-.feature-item { border-left: 3px solid var(--accent); padding-left: 20px; }
-.feature-item h5 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--navy); margin-bottom: 8px; text-transform: uppercase; }
-.feature-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
-.sidebar-card { background: var(--light); border-radius: 16px; padding: 32px; margin-bottom: 24px; border: 1px solid var(--border); }
+    .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 40px 0; }
+    .video-card { background: var(--black); border-radius: 12px; overflow: hidden; position: relative; aspect-ratio: 16/9; }
+    .video-card video { width: 100%; height: 100%; object-fit: cover; }
+    
+    .equip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
+    .equip-card { background: var(--white); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); transition: all .3s; }
+    .equip-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); border-color: var(--accent); }
+    .equip-img { width: 100%; height: 200px; overflow: hidden; background: #f8fafc; }
+    .equip-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+    .equip-card:hover .equip-img img { transform: scale(1.1); }
+    .equip-info { padding: 20px; }
+    .equip-info h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: var(--navy); text-transform: uppercase; margin-bottom: 8px; }
+    
+    .sidebar-card { background: var(--light); border-radius: 16px; padding: 32px; margin-bottom: 24px; border: 1px solid var(--border); }
 .contact-sidebar { background: var(--navy); border-radius: 16px; padding: 32px; text-align: center; color: white; }
 @media(max-width:1024px){ .service-layout{grid-template-columns:1fr;} .sidebar{order:-1;} }
 </style>
@@ -23,8 +32,8 @@
   <div class="page-hero-bg"></div><div class="page-hero-pattern"></div><div class="page-hero-bar"></div>
   <div class="page-hero-inner">
     <div class="breadcrumb"><a href="../index.html">Accueil</a><span>›</span><a href="services.html">Services</a><span>›</span><span>Bio Nettoyage</span></div>
-    <h1>Bio Nettoyage Hospitalier</h1>
-    <p>Réduction des risques infectieux par des protocoles de décontamination stricts pour les milieux de santé.</p>
+    <h1>Bio nettoyage en milieu hospitalier</h1>
+    <p>Une technique de nettoyage respectueuse de l’environnement, utilisant des produits biologiques pour un haut niveau d’hygiène.</p>
   </div>
 </section>
 
@@ -35,24 +44,50 @@
       <div class="anim">
         <div class="service-main-img"></div>
 
-        <span class="section-label">Sécurité Sanitaire</span>
-        <h2 class="section-title">Hygiène en Milieu de Santé</h2>
-        <p class="section-desc">HPCI-SARL intervient dans les établissements de santé (hôpitaux, cliniques, laboratoires) avec une expertise spécifique en bio-nettoyage. Nous appliquons des protocoles d'asepsie rigoureux pour l'élimination des micro-organismes.</p>
+        <span class="section-label">Expertise Sanitaire</span>
+        <h2 class="section-title">Normes d'Hygiène Hospitalières</h2>
+        <p class="section-desc">Le bio-nettoyage en milieu hospitalier est une pratique cruciale pour maintenir des normes d’hygiène élevées et réduire les risques d'infections nosocomiales. Notre approche repose sur l’utilisation de produits biodégradables minimisant l’impact sur les patients et le personnel.</p>
 
-        <div class="service-features">
-          <div class="feature-item"><h5>Désinfection Hospitalière</h5><p>Nettoyage des zones de soins, blocs opératoires et chambres patient.</p></div>
-          <div class="feature-item"><h5>Asepsie & Protocoles</h5><p>Respect strict des protocoles de décontamination et traçabilité des interventions.</p></div>
-          <div class="feature-item"><h5>Zones à Risque</h5><p>Maintenance de l'hygiène des blocs, laboratoires et services sensibles.</p></div>
-          <div class="feature-item"><h5>Gestion des Déchets</h5><p>Aide au tri et à la pré-collecte des déchets médicaux en toute sécurité.</p></div>
+        <h3 class="section-title" style="font-size: 1.4rem; margin-top: 40px;">Démonstrations Vidéos</h3>
+        <div class="video-grid">
+          <div class="video-card anim">
+            <video controls poster="../images/services/bio-1.jpg">
+              <source src="../videos/services/bio-1.mov" type="video/quicktime">
+              Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+          </div>
+          <div class="video-card anim">
+            <video controls poster="../images/services/bio-2.jpg">
+              <source src="../videos/services/bio-2.mov" type="video/quicktime">
+              Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+          </div>
         </div>
 
-        <h3 class="section-title" style="font-size: 1.6rem; margin-top: 50px;">Unités d'Intervention</h3>
-        <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 24px 0 40px;">
-          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Centres Hospitaliers et Poly-cliniques</li>
-          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Laboratoires d'Analyses Médicales</li>
-          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Centres de Diagnostic et Imagerie</li>
-          <li style="display: flex; gap: 10px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Établissements de Soins de Longue Durée</li>
-        </ul>
+        <h3 class="section-title" style="font-size: 1.4rem; margin-top: 40px;">Expertise en Images</h3>
+        <div class="equip-grid">
+          <div class="equip-card anim">
+            <div class="equip-img"><img src="../images/services/bio-1.jpg" alt="Désinfection vapeur"></div>
+            <div class="equip-info"><h4>Désinfection Vapeur</h4></div>
+          </div>
+          <div class="equip-card anim">
+            <div class="equip-img"><img src="../images/services/bio-2.jpg" alt="Protocole strict"></div>
+            <div class="equip-info"><h4>Protocoles de décontamination</h4></div>
+          </div>
+          <div class="equip-card anim">
+            <div class="equip-img"><img src="../images/services/bio-3.jpg" alt="Nettoyage précision"></div>
+            <div class="equip-info"><h4>Nettoyage Haute Précision</h4></div>
+          </div>
+        </div>
+
+        <div style="margin-top: 50px;">
+          <h3 class="section-title" style="font-size: 1.4rem;">Nos Engagements en Milieu Hospitalier</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px; margin-top: 20px;">
+            <li style="display: flex; gap: 12px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Utilisation de produits certifiés biodégradables et respectueux de la santé.</li>
+            <li style="display: flex; gap: 12px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Formation continue des agents aux protocoles d'asepsie spécifiques.</li>
+            <li style="display: flex; gap: 12px; align-items: baseline;"><span style="color: var(--accent); font-weight: 800;">›</span> Traçabilité complète des opérations de nettoyage et de désinfection.</li>
+          </ul>
+        </div>
       </div>
 
       <!-- SIDEBAR -->
