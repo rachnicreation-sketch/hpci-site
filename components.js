@@ -14,10 +14,10 @@ function injectTopbar() {
         <a href="tel:+242057911680">📞 Brazzaville : +242 05 791 16 80</a>
       </div>
       <div class="topbar-social">
-        <a href="https://www.facebook.com/profile.php?id=61565882327789" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.linkedin.com/company/hpci-abidjansarl/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="http://www.tiktok.com/@hpciabidjan.sarl" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="http://wa.me/2250706046595" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61565882327789" target="_blank" aria-label="Facebook" class="sc-facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/company/hpci-abidjansarl/" target="_blank" aria-label="LinkedIn" class="sc-linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="http://www.tiktok.com/@hpciabidjan.sarl" target="_blank" aria-label="TikTok" class="sc-tiktok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="http://wa.me/2250706046595" target="_blank" aria-label="WhatsApp" class="sc-whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
     </div>
   </div>`;
@@ -109,10 +109,10 @@ function injectFooter() {
           </a>
           <p>Hygiène Prodige Com International — Spécialiste du nettoyage industriel, de la maintenance et de l'assainissement en Afrique centrale et de l'Ouest.</p>
           <div class="footer-social">
-            <a href="https://www.facebook.com/profile.php?id=61565882327789" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.linkedin.com/company/hpci-abidjansarl/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="http://www.tiktok.com/@hpciabidjan.sarl" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="http://wa.me/2250706046595" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61565882327789" target="_blank" aria-label="Facebook" class="sc-facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/hpci-abidjansarl/" target="_blank" aria-label="LinkedIn" class="sc-linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="http://www.tiktok.com/@hpciabidjan.sarl" target="_blank" aria-label="TikTok" class="sc-tiktok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="http://wa.me/2250706046595" target="_blank" aria-label="WhatsApp" class="sc-whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
         <div class="footer-col">

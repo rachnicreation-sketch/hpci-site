@@ -403,7 +403,8 @@
 
     .partners-track {
       display: flex;
-      width: calc(250px * 28); /* 14 items + 14 duplicates */
+      width: calc(250px * 28);
+      /* 14 items + 14 duplicates */
       animation: marquee 40s linear infinite;
       gap: 50px;
       align-items: center;
@@ -432,8 +433,13 @@
     }
 
     @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-250px * 14)); }
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-250px * 14));
+      }
     }
 
     @media (max-width: 1024px) {
@@ -542,11 +548,21 @@
       <!-- SLIDE 1: MAIN -->
       <div class="hero-slide active">
         <div class="slide-content">
-          <span class="slide-badge">Expertise & Innovation depuis 2014</span>
+          <div class="slide-top">
+            <span class="slide-badge">Expertise & Innovation depuis 2014</span>
+            <div class="slide-pill-group">
+              <span class="slide-pill">Nettoyage industriel</span>
+              <span class="slide-pill">Maintenance</span>
+              <span class="slide-pill">Sécurité</span>
+            </div>
+          </div>
           <h1 class="slide-title">L'Excellence du Nettoyage <span>Industriel & Professionnel</span></h1>
-          <p class="slide-desc">Leader panafricain de l'hygiène industrielle, HPCI-SARL déploie des solutions de pointe pour la maintenance, l'assainissement et la sécurité de vos installations les plus critiques.</p>
+          <p class="slide-desc">Leader panafricain de l'hygiène industrielle, HPCI-SARL offre des solutions sur mesure
+            pour sécuriser vos installations et maintenir la performance de vos opérations.</p>
           <div class="slide-cta">
-            <a href="pages/services.html" class="btn-slider">Nos solutions techniques <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="pages/services.html" class="btn-slider">Nos solutions techniques <i
+                class="fa-solid fa-arrow-right"></i></a>
+            <a href="pages/contact.html" class="btn-secondary">Demander un devis</a>
           </div>
         </div>
         <div class="slide-visual">
@@ -555,28 +571,48 @@
       </div>
 
       <!-- SLIDE 2: PHYTO -->
-      <div class="hero-slide">
+      <div class="hero-slide hero-slide-phytosanitaire">
         <div class="slide-content">
-          <span class="slide-badge">Hygiène Environnementale</span>
-          <h1 class="slide-title">Traitement phytosanitaire et <span>assainissement</span></h1>
-          <p class="slide-desc">Méthodes spécifiques utilisées pour éliminer les organismes nuisibles et maintenir un environnement sain, tout en préservant la biodiversité.</p>
+          <div class="slide-top">
+            <span class="slide-badge">Hygiène Environnementale</span>
+            <div class="slide-pill-group">
+              <span class="slide-pill">Assainissement</span>
+              <span class="slide-pill">Biodiversité</span>
+              <span class="slide-pill">Performance</span>
+            </div>
+          </div>
+          <h1 class="slide-title">Traitement phytosanitaire et <span>assainissement durable</span></h1>
+          <p class="slide-desc">Solutions sur mesure pour protéger vos sites, maîtriser les nuisibles et garantir un
+            cadre sain et conforme aux normes environnementales.</p>
           <div class="slide-cta">
-            <a href="pages/services.html" class="btn-slider">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="pages/service-phytosanitaire.html" class="btn-slider">Découvr <a href="pages/contact.html"
+                class="btn-secondary">Contactez nos experts</a>
           </div>
         </div>
         <div class="slide-visual">
           <img src="./images/services/phyto.jpg" alt="Traitement Phytosanitaire">
+          <div class="visual-tag">Assainissement & Phytosanitaire</div>
         </div>
       </div>
 
       <!-- SLIDE 3: HSE -->
       <div class="hero-slide">
         <div class="slide-content">
-          <span class="slide-badge">Qualité, Hygiène, Sécurité & Environnement</span>
+          <div class="slide-top">
+            <span class="slide-badge">Qualité, Hygiène, Sécurité & Environnement</span>
+            <div class="slide-pill-group">
+              <span class="slide-pill">Formation</span>
+              <span class="slide-pill">Conformité</span>
+              <span class="slide-pill">Risque maîtrisé</span>
+            </div>
+          </div>
           <h1 class="slide-title">Mise à disposition du <span>personnel HSE</span></h1>
-          <p class="slide-desc">Fourniture de professionnels en santé, sécurité et environnement pour garantir la conformité réglementaire et la gestion des risques.</p>
+          <p class="slide-desc">Fourniture de professionnels en santé, sécurité et environnement pour garantir la
+            conformité réglementaire et la gestion des risques.</p>
           <div class="slide-cta">
-            <a href="pages/services.html" class="btn-slider">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="pages/service-hse.html" class="btn-slider">Découvrir le service <i
+                class="fa-solid fa-arrow-right"></i></a>
+            <a href="pages/contact.html" class="btn-secondary">Réserver une équipe</a>
           </div>
         </div>
         <div class="slide-visual">
@@ -587,11 +623,21 @@
       <!-- SLIDE 4: ENGINEERING -->
       <div class="hero-slide">
         <div class="slide-content">
-          <span class="slide-badge">Bureau d'études & Engineering</span>
-          <h1 class="slide-title">Engineering : <span>Conception & Optimisation</span></h1>
-          <p class="slide-desc">L’ingénierie est une discipline qui englobe la conception, la réalisation et l’optimisation de systèmes techniques, industriels ou mécaniques.</p>
+          <div class="slide-top">
+            <span class="slide-badge">Bureau d'études & Engineering</span>
+            <div class="slide-pill-group">
+              <span class="slide-pill">Audit</span>
+              <span class="slide-pill">Innovation</span>
+              <span class="slide-pill">Efficacité</span>
+            </div>
+          </div>
+          <h1 class="slide-title">Bureau d'études et <span>engineering</span></h1>
+          <p class="slide-desc">Appui technique, études de risques et solutions sur mesure pour optimiser la performance
+            et la sécurité de vos installations industrielles.</p>
           <div class="slide-cta">
-            <a href="pages/services.html" class="btn-slider">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="pages/service-engineering.html" class="btn-slider">Voir l'offre <i
+                class="fa-solid fa-arrow-right"></i></a>
+            <a href="pages/contact.html" class="btn-secondary">Demander une étude</a>
           </div>
         </div>
         <div class="slide-visual">
@@ -615,12 +661,18 @@
           <span class="section-label">A PROPOS DE NOUS</span>
           <h2 class="section-title">En "Nettoyage autrement"</h2>
           <p class="section-desc">HPCI-SARL offre à sa clientèle un produit efficient.
-            Dans cette optique, HPCI-SARL a procédé à la diversification de ses prestations mises à la disposition de sa clientèle.
-            Aujourd’hui, HPCI-SARL intervient dans les divers segments du nettoyage. Nos prestations s’adressent aussi bien au segment du nettoyage industriel, qu’à celui du nettoyage domestique en passant par l’assainissement de l’environnement.
-            Pour « nettoyer autrement », HPCI-SARL s’est dotée,d’équipements innovants, qui confèrent une efficience effective à sa démarche de nettoyage.</p>
+            Dans cette optique, HPCI-SARL a procédé à la diversification de ses prestations mises à la disposition de sa
+            clientèle.
+            Aujourd’hui, HPCI-SARL intervient dans les divers segments du nettoyage. Nos prestations s’adressent aussi
+            bien au segment du nettoyage industriel, qu’à celui du nettoyage domestique en passant par l’assainissement
+            de l’environnement.
+            Pour « nettoyer autrement », HPCI-SARL s’est dotée,d’équipements innovants, qui confèrent une efficience
+            effective à sa démarche de nettoyage.</p>
           <p class="section-desc">Chacune de nos prestations sont effectuées avec ses équipements haut de gamme.
-            Pour « nettoyer autrement », HPCI-SARL a particulièrement investi dans le renforcement des compétences de son personnel qui lui permet de participer à traduire l’efficience recherchée.
-            « Nettoyer autrement » est le gage de la qualité que HPCI-SARL s’engage à maintenir et à développer pour la mettre au service de sa clientèle.</p>
+            Pour « nettoyer autrement », HPCI-SARL a particulièrement investi dans le renforcement des compétences de
+            son personnel qui lui permet de participer à traduire l’efficience recherchée.
+            « Nettoyer autrement » est le gage de la qualité que HPCI-SARL s’engage à maintenir et à développer pour la
+            mettre au service de sa clientèle.</p>
           <div style="margin-top: 32px;">
             <a href="pages/a-propos.html" class="btn-dark">Découvrir notre ADN →</a>
           </div>
@@ -735,7 +787,8 @@
           <!-- Défilement infini -->
           <a href="#" class="partner-item"><img src="./images/partenaires/alucongo.jpeg" alt="ALUCONGO"></a>
           <a href="#" class="partner-item"><img src="./images/partenaires/beac.jpeg" alt="BEAC"></a>
-          <a href="#" class="partner-item"><img src="./images/partenaires/banque-postale.jpeg" alt="LA BANQUE POSTALE"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/banque-postale.jpeg"
+              alt="LA BANQUE POSTALE"></a>
           <a href="#" class="partner-item"><img src="./images/partenaires/brasco.jpeg" alt="BRASCO"></a>
           <a href="#" class="partner-item"><img src="./images/partenaires/cec.jpeg" alt="CEC"></a>
           <a href="#" class="partner-item"><img src="./images/partenaires/coraf.jpeg" alt="CORAF"></a>
@@ -751,7 +804,8 @@
           <!-- Duplicate for infinite loop -->
           <a href="#" class="partner-item"><img src="./images/partenaires/alucongo.jpeg" alt="ALUCONGO"></a>
           <a href="#" class="partner-item"><img src="./images/partenaires/beac.jpeg" alt="BEAC"></a>
-          <a href="#" class="partner-item"><img src="./images/partenaires/banque-postale.jpeg" alt="LA BANQUE POSTALE"></a>
+          <a href="#" class="partner-item"><img src="./images/partenaires/banque-postale.jpeg"
+              alt="LA BANQUE POSTALE"></a>
           <a href="#" class="partner-item"><img src="./images/partenaires/brasco.jpeg" alt="BRASCO"></a>
           <a href="#" class="partner-item"><img src="./images/partenaires/cec.jpeg" alt="CEC"></a>
           <a href="#" class="partner-item"><img src="./images/partenaires/coraf.jpeg" alt="CORAF"></a>
@@ -763,7 +817,7 @@
           <a href="#" class="partner-item"><img src="./images/partenaires/snpc.jpeg" alt="SNPC"></a>
           <a href="#" class="partner-item"><img src="./images/partenaires/total-energies.jpeg" alt="TOTAL ENERGIES"></a>
           <a href="#" class="partner-item"><img src="./images/partenaires/weatherford.jpeg" alt="WEATHERFORD"></a>
-  
+
         </div>
       </div>
     </div>
@@ -788,10 +842,14 @@
         <p>Hygiène Prodige Com International — Spécialiste du nettoyage industriel, de la maintenance et de
           l'assainissement en Afrique centrale et de l'Ouest.</p>
         <div class="footer-social">
-          <a href="https://www.facebook.com/profile.php?id=61565882327789" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://www.linkedin.com/company/hpci-abidjansarl/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="http://www.tiktok.com/@hpciabidjan.sarl" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="http://wa.me/2250706046595" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61565882327789" target="_blank" aria-label="Facebook"><i
+              class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/hpci-abidjansarl/" target="_blank" aria-label="LinkedIn"><i
+              class="fa-brands fa-linkedin-in"></i></a>
+          <a href="http://www.tiktok.com/@hpciabidjan.sarl" target="_blank" aria-label="TikTok"><i
+              class="fa-brands fa-tiktok"></i></a>
+          <a href="http://wa.me/2250706046595" target="_blank" aria-label="WhatsApp"><i
+              class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
       <div class="footer-col">

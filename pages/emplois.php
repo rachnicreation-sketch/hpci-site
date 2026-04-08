@@ -33,7 +33,7 @@ $jobs_list = $stmt->fetchAll();
       <li><a href="../index.php">Accueil</a></li>
       <li><a href="actualite.php">Actualité</a></li>
       <li><a href="emplois.php" class="active">Emplois</a></li>
-      <li><a href="contact.php" class="nav-cta">Nous contacter</a></li>
+      <li><a href="contact.html" class="nav-cta">Nous contacter</a></li>
     </ul>
   </div>
 </nav>

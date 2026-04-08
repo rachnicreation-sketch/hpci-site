@@ -22,10 +22,10 @@
       <a href="tel:+242066652728"><i class="fa-solid fa-phone"></i> Pointe-Noire : +242 066 652 728</a>
     </div>
     <div class="topbar-social">
-      <a href="https://www.facebook.com/profile.php?id=61565882327789" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://www.linkedin.com/company/hpci-abidjansarl/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="https://www.tiktok.com/@hpciabidjan.sarl" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-      <a href="https://wa.me/2250706046595" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61565882327789" target="_blank" title="Facebook" class="sc-facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.linkedin.com/company/hpci-abidjansarl/" target="_blank" title="LinkedIn" class="sc-linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://www.tiktok.com/@hpciabidjan.sarl" target="_blank" title="TikTok" class="sc-tiktok"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://wa.me/2250706046595" target="_blank" title="WhatsApp" class="sc-whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
   </div>
 </div>
@@ -52,7 +52,7 @@
         </div>
       </li>
       <li><a href="pages/actualite.php">Actualité</a></li>
-      <li><a href="pages/contact.php" class="nav-cta">Nous contacter</a></li>
+      <li><a href="pages/contact.html" class="nav-cta">Nous contacter</a></li>
     </ul>
   </div>
 </nav>
@@ -71,7 +71,7 @@
         </div>
       </div>
       <div class="slide-visual">
-        <img src="./images/hero/hero-principal.jpg" alt="Nettoyage Industriel">
+        <img src="./images/hero/hero-principal.png" alt="Nettoyage Industriel">
       </div>
     </div>
 
@@ -175,9 +175,9 @@
       <img src="./images/logo/LOGO-PNR.jpeg" alt="Logo" style="height: 40px; margin-bottom: 20px;">
       <p style="font-size: 0.9rem; color: #64748b;">Hygiène Prodige Com International — Expert en solutions industrielles.</p>
       <div class="footer-social" style="margin-top: 20px; display: flex; gap: 15px;">
-        <a href="https://www.facebook.com/profile.php?id=61565882327789" target="_blank" style="color: #1a4480; font-size: 1.2rem;"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.linkedin.com/company/hpci-abidjansarl/" target="_blank" style="color: #1a4480; font-size: 1.2rem;"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://wa.me/2250706046595" target="_blank" style="color: #25d366; font-size: 1.2rem;"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61565882327789" target="_blank" class="sc-facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/company/hpci-abidjansarl/" target="_blank" class="sc-linkedin"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://wa.me/2250706046595" target="_blank" class="sc-whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
     </div>
     <div>

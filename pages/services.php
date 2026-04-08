@@ -27,7 +27,7 @@
     <ul class="nav-links">
       <li><a href="../index.php">Accueil</a></li>
       <li><a href="services.php" class="active">Services</a></li>
-      <li><a href="contact.php" class="nav-cta">Nous contacter</a></li>
+      <li><a href="contact.html" class="nav-cta">Nous contacter</a></li>
     </ul>
   </div>
 </nav>
